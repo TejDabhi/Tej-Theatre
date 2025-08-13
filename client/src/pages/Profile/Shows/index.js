@@ -1,5 +1,5 @@
 import { Col, Form, Modal, Row, Table, message } from "antd";
-import React, { useEffect ,useState} from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../../../components/Button";
 import { GetAllMovies } from "../../../apicalls/movies";
 import { useDispatch } from "react-redux";
@@ -210,7 +210,7 @@ function Shows({ openShowsModal, setOpenShowsModal, theatre }) {
               <Form.Item
                 label="Show Name"
                 name="name"
-                rules={[{ required: true, message: "Please input show name!" }]}
+                rules={[{ required: true, message: "Please input Show name!" }]}
               >
                 <input />
               </Form.Item>
@@ -219,7 +219,7 @@ function Shows({ openShowsModal, setOpenShowsModal, theatre }) {
               <Form.Item
                 label="Date"
                 name="date"
-                rules={[{ required: true, message: "Please input show date!" }]}
+                rules={[{ required: true, message: "Please input Show date!" }]}
               >
                 <input
                   type="date"
@@ -236,7 +236,7 @@ function Shows({ openShowsModal, setOpenShowsModal, theatre }) {
                 label="Time"
                 name="time"
                 rules={[
-                  { required: true, message: "Please input show time!" },
+                  { required: true, message: "Please input Show time!" },
                   {
                     validator: (_, value) => {
                       if (!value) return Promise.resolve();
@@ -266,7 +266,7 @@ function Shows({ openShowsModal, setOpenShowsModal, theatre }) {
               <Form.Item
                 label="Movie"
                 name="movie"
-                rules={[{ required: true, message: "Please select movie!" }]}
+                rules={[{ required: true, message: "Please select Movie!" }]}
               >
                 <select>
                   <option value="">Select Movie</option>
@@ -281,13 +281,13 @@ function Shows({ openShowsModal, setOpenShowsModal, theatre }) {
 
             <Col span={8}>
               <Form.Item
-                label="Ticket Price"
+                label="Movie Ticket Price"
                 name="ticketPrice"
                 rules={[
                   { required: true, message: "Please input ticket price!" },
                 ]}
               >
-                <input type="number" />
+                <input type="number" min={90} max={600} />
               </Form.Item>
             </Col>
 

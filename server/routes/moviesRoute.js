@@ -25,7 +25,7 @@ router.get("/get-all-movies", async (req, res) => {
     const movies = await Movie.find().sort({ createdAt: -1 });
     res.send({
       success: true,
-      message: "Movies fetched successfully",
+      message: "Movie fetched successfully",
       data: movies,
     });
   } catch (error) {

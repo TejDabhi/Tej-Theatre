@@ -129,7 +129,7 @@ function TheatresList() {
 
                   {!hasShows && (
                     <button
-                      aria-label="delete theatre"
+                      aria-label="delete Theatre"
                       style={{
                         background: "none",
                         border: "none",

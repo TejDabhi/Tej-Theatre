@@ -27,7 +27,7 @@ router.get("/get-all-theatres", async (req, res) => {
       .sort({ createdAt: -1 });
     res.send({
       success: true,
-      message: "Theatres fetched successfully",
+      message: "Theatre fetched successfully",
       data: theatres,
     });
   } catch (error) {
@@ -45,7 +45,7 @@ router.post("/get-all-theatres-by-owner",  async (req, res) => {
     });
     res.send({
       success: true,
-      message: "Theatres fetched successfully",
+      message: "Theatre fetched successfully",
       data: theatres,
     });
   } catch (error) {
@@ -113,7 +113,7 @@ router.post("/get-all-shows-by-theatre",  async (req, res) => {
 
     res.send({
       success: true,
-      message: "Shows fetched successfully",
+      message: "Show fetched successfully",
       data: shows,
     });
   } catch (error) {
@@ -237,7 +237,7 @@ router.post("/get-shows-by-movie-id", async (req, res) => {
 
     res.send({
       success: true,
-      message: "Shows fetched successfully",
+      message: "Show fetched successfully",
       data: shows,
     });
   } catch (error) {
@@ -267,7 +267,7 @@ router.post("/get-shows-by-theatre-id", async (req, res) => {
 
     res.send({
       success: true,
-      message: "Shows fetched successfully",
+      message: "Show fetched successfully",
       data: shows,
     });
   } catch (error) {

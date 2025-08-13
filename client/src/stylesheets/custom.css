@@ -414,3 +414,82 @@ thead th {
     border-bottom: 1px solid #374151;
   }
 }
+.admin-message {
+  background: linear-gradient(120deg, #e0e7ff 0%, #f3f4f6 100%);
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(22, 119, 255, 0.12), 0 1.5px 8px rgba(0,0,0,0.04);
+  padding: 2.5rem 2rem;
+  margin: 2.5rem auto;
+  max-width: 540px;
+  text-align: center;
+  border: 1.5px solid #dbeafe;
+  animation: fadeInAdmin 0.7s cubic-bezier(.23,1,.32,1);
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+@keyframes fadeInAdmin {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.admin-message h1 {
+  color: #2563eb;
+  font-size: 2.2rem;
+  margin-bottom: 0.7rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 8px rgba(22,119,255,0.08);
+}
+
+.admin-message h3 {
+  color: #374151;
+  font-size: 1.15rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.admin-message button {
+  background: linear-gradient(135deg, #1677ff 0%, #2563eb 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.85rem 2rem;
+  font-size: 1.08rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 3px 12px rgba(22, 119, 255, 0.15);
+  transition: background 0.18s, transform 0.18s, box-shadow 0.18s;
+  outline: none;
+  letter-spacing: 0.01em;
+}
+
+.admin-message button:hover,
+.admin-message button:focus {
+  background: linear-gradient(135deg, #2563eb 0%, #1677ff 100%);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(22, 119, 255, 0.22);
+}
+
+@media (max-width: 600px) {
+  .admin-message {
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+  .admin-message h1 {
+    font-size: 1.3rem;
+  }
+  .admin-message h3 {
+    font-size: 1rem;
+  }
+  .admin-message button {
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+  }
+}

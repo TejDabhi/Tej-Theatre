@@ -80,7 +80,7 @@ function TheatreForm({
         <Form.Item
           label="Name"
           name="name"
-          rules={[{ required: true, message: "Please enter theatre name" }]}
+          rules={[{ required: true, message: "Please enter Theatre name" }]}
         >
           <Input />
         </Form.Item>

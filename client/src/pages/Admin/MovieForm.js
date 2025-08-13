@@ -52,7 +52,7 @@ function MovieForm({
 
   return (
     <Modal
-      title={formType === 'add' ? 'ADD MOVIE' : 'EDIT MOVIE'}
+      title={formType === 'add' ? 'ADD Movie' : 'EDIT Movie'}
       open={showMovieFormModel}
       onCancel={() => {
         setShowMovieFormModel(false)
@@ -105,14 +105,15 @@ function MovieForm({
                 <Option value="Hindi">Hindi</Option>
                 <Option value="Tamil">Tamil</Option>
                 <Option value="Telugu">Telugu</Option>
+                <Option value="Gujarati">Gujarati</Option>
               </Select>
             </Form.Item>
           </Col>
           <Col span={8}>
             <Form.Item
-              label="Release Date"
+              label="Date"
               name="releaseDate"
-              rules={[{ required: true, message: 'Enter release date' }]}
+              rules={[{ required: true, message: ' Date' }]}
             >
               <Input type='date'
               min={moment().format("YYYY-MM-DD")}
@@ -121,15 +122,15 @@ function MovieForm({
           </Col>
           <Col span={8}>
             <Form.Item
-              label="Genre"
+              label="Destination"
               name="genre"
-              rules={[{ required: true, message: 'Select genre' }]}
+              rules={[{ required: true, message: 'Select Destination' }]}
             >
               <Select placeholder="Select Genre">
                 <Option value="Action">Action</Option>
-                <Option value="Comedy">Comedy</Option>
-                <Option value="Drama">Drama</Option>
                 <Option value="Romance">Romance</Option>
+                <Option value="Horror">Horror</Option>
+                <Option value="Thriller">Thriller</Option>
               </Select>
             </Form.Item>
           </Col>
